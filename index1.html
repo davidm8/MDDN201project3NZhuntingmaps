@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- new metas under here -->
+
+        <title>NZ hunting</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Styles.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!--break-->
+
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    var markers = [
+    {
+        "title": 'nelson',
+        "lat": '-41.955256',
+        "lng": '172.655672',
+        "description": '<img src = "img/chamois.jpg" width="100%" height="100%"> <h2>Chamois</h2><br>Size: Males are 650-900 mm (shoulder height) and weigh 25-45 kg. Females are smaller at 600-800 mm shoulder height and weighing 19-35 kg.<br>Colour: Their summer coat varies from grey-brown, tan to honey-gold tone. Their much darker winter coat is dark brown/almost black.<br>On their face they have a dark brown or black band that goes from the nose, around the eyes to base of horns. Their cheeks and throat are white or pale fawn.<br>Horns: Both male and females have horns which are black and slender. They arise straight up before curving backwards to form sharp hooks at the ends. Male horns are usually stouter and their hooks more strongly developed than females.<br>Reproduction: Mating season begins in early-mid May, peaking in late May to early June. During this time dominant males will gather available females in a harem, defending them from other males often posturing with imposing displays but rarely resulting in frontal attacks.<br>Gestation period: Variable 5 1/2 to 6 months.<br>Birthing: Single young are born from November to February.<br>Nomenclature: Male chamois are called bucks, females called doe, and their young called kids.<br>'
+    },
+    {
+        "title": 'tekapo',
+        "lat": '-43.767756',
+        "lng": '170.410173',
+        "description": '<img src = "img/tahr1.jpg" width="100%" height="100%"> <h2>Tahr</h2><br>Size: Himalayan tahr (Hemitragus jemlahicus) are similar in appearance to large goats with adult males measuring up to just over one m at shoulder height. Mature adult females seldom weigh more than 36 kg while adult males have been known to weigh as much as 136 kg.<br>Colour: In winter bull tahr have a much prized, thick reddish to dark brown pelt, with a lighter coloured mane and a more or less distinct dark stripe on their back. Females are usually lighter in colour. In the spring tahr lose much of their coat, and it becomes lighter in colour.<br>Horns: Both sexes have horns with males having slightly larger horns than females. The horns nearly touch at the base, curve and diverge backwards, and approach again at the tips. Tahr horns are measured from base to tip along the outside of the curve. Good specimens range between 28–36 cm. long.<br>Reproduction: The rut occurs late May to mid-July and at that time the mature bulls mix with the female group staying only if there is a female in oestrus. Bulls competing for the same female can enter prolonged displays which rarely end in fighting. Females give birth to a single kid.<br>Gestation period: About 165 days.<br>Birthing: November-January.<br>Nomenclature: Male = bull. Females = nanny. Young = kid.'
+    },
+    {
+        "title": 'Bay of Plenty',
+        "lat": '-37.843932',
+        "lng": '176.117832',
+        "description": '<img src = "img/fellow.jpg" width="100%" height="100%"><h2>Fallow Deer</h2><br>Fallow deer were among the first to be successfully introduced to New Zealand.<br>Size: Males 900-1000 mm shoulder height and 60-85 kg in weight with females smaller at 850-900 mm shoulder height and weighing 30-50 kg.<br>Colour: The most variable of any deer species in New Zealand with four quite distinctive colour phases:<br>-Melanistic: In New Zealand this is the most common colour encountered. Brown-black back with paler grey-brown underside and neck. There are no spots or tail patch.<br>-Common: Light red brown sides and back with conspicuous white spots and a black stripe down the back. Colour grey black in winter.<br>-Menil: A paler version of the common phase fallow, in summer coat, but doesnt attain the darker winter coat.<br>-Leucistic: In young animals a creamy colour which with age (by second summer) becomes pure white. Such white animals are not albino having dark eyes and nose.<br>Antlers: Present on males only and cast each year in October or November with replacement antlers developed by February. Typical antlers on older deer (yearlings have unbranched spikes) have a round main beam at the base which becomes flattened and palmated at the top end. On the lower beam are brow and trez tines and the palmation has points on the rear edge pointing backwards.<br>Reproduction: Rut begins in April with males establishing territories, marked by scrapes in the ground into which the male urinates.<br>Females usually dont breed till 16 months old with young males, less than 4 years old, kept from mating by older males. Females are attracted to the males rather than a male herding them up in a harem like some other deer species. Usually females give birth to a single fawn, twinning is rare.<br>Gestation period: About 234 days.<br>Birthing: December-January.<br>Nomenclature: Male = buck. Females = doe. Young = fawn.<br>'
+    },
+    {
+        "title": 'stewart island',
+        "lat": '-47.033449',
+        "lng": '168.011754',
+        "description": '<img src = "img/reddeer.jpg" width="100%" height="100%"><h2>Red Deer</h2><br>the most widespread deer species in New Zealand.<br>Colour: The summer coat of red deer is typically a reddish brown. White spots are extremely rare on adults and limited to the area around the spine. Although red deer sometimes have a dorsal stripe, it is usually restricted to the neck and hip regions, and is rarely continuous.<br>The winter coat of red deer is usually of a brown or grey-brown with the throat and underside being light grey grading to creamy-white between the hind legs.<br>Although red deer have a cream rump patch, no margin is present and it cannot be flared as in sika.<br>Reproduction: Before the rut, male groupings break up as the older males seek to establish their own rutting area and attempt to attract females into a harem. During the roar, males will roar periodically, especially in the early morning and evening.<br>Red deer make use of wallows, both during the roar and at other times of the year. The covering of mud accentuates the smell of a rutting male and can give the deer a larger, darker appearance.<br>The rut is from late March through April with most conceptions occurring early to mid-April.<br>Gestation period: 221 to 252 days. Average 234 days.<br>Birthing: Late November and December, peak early December. Fawns born with reddish brown coats scattered with white spots on back and flanks. Spots disappear in about 2 months.<br>Nomenclature: Male = stag. Female = hind. Young = fawn/calf.'
+    },
+    {
+        "title": 'skippers canyon',
+        "lat": '-44.888463',
+        "lng": '168.678917',
+        "description": '<img src = "img/goat.jpg" width="100%" height="100%"><h2>feral Goats</h2><br>Feral goats are found in a wide range of habitats. They range from sea level to the alpine zone, living in introduced and native grasslands, scrub and forest.<br>Size: Adult male goats in New Zealand stand around 60-80 cm at the shoulder and weigh an average of about 42 kg.<br>Females are smaller (shoulder height around 60-70 cm) and lighter (average around 30 kg) than males.<br>Colour: The coat is generally short haired with variable amounts of underfur. The hindquarters of both sexes, and the neck and shoulders of males may be shaggy.<br>Colour wise, they can be black, white or brown, or any combination of these. All males and some females are bearded as adults.<br>Horns: In New Zealand both sexes have horns. In females they are slender and curve upwards and backwards, with a clear space between the bases. In males the horns are larger and sweep up and backwards or up and outwards in an open spiral. The horns may touch at the base. The horns are not shed annually like antlers but are retained for the life of the animal.<br>Males are the largest sex, with clearly heavier forequarters, shaggier coats and larger horns. There is great variability in the colour, pattern and length of the coat, and in horn form and body size, related to the breed origins and nutritional condition of local populations.<br>Reproduction: In New Zealand there is virtually year round mating, often peaking November-December, with most females breeding in their first year. When about to give birth, females move away from the group and it can take up to a year before integrating back with other goats occurs. A high percentage of twins are born.Gestation period: 5 months.<br>Birthing: Can be any month.<br>Nomenclature: Males = billy. Females = nanny. Young = kid.'
+    },
+    {
+        "title": 'stewart island',
+        "lat": '-47.141052',
+        "lng": '167.646180',
+        "description": '<img src = "img/whitetail.jpg" width="100%" height="100%"><h2>white Tail Deer</h2><br>New Zealand has the only herds of white-tail deer in the southern hemisphere.<br>Size: Males stand around 1000 mm at the shoulder and weigh 50 kg plus with females lighter at 40 kg plus.<br>Colour: Male and female similar in colour with winter coat grey-brown and summer a light brown. The underside, chin, upper throat, and rump patch are white. Tail long, grey brown fringed with white and white underside.<br>Antlers: Only male carry antlers, which curve forward with vertical tines and no brow tines. Antlers are cast July to August with new ones hardened by following March.<br>Social behaviour: Female white-tail deer and their offspring live in small family groups while the males live separately.<br>Reproduction: Females usually give birth to their first calf when two years old. Calves require milk for the first three months and stay with their mother for eight to nine months. The rut occurs late April to end of May, peaking middle May. Bucks do not call during the rut make wallows or round up females in a harem they stay with an individual doe while she is in oestrus.<br>Gestation period: 187 – 222 days.<br>Breeding: Most calves born in December- January<br>Nomenclature: Male = buck. Female = doe. Young = fawn.'
+    },
+    {
+        "title": 'hunter hills',
+        "lat": '-44.682478',
+        "lng": '170.919623',
+        "description": '<img src = "img/wallaby.jpg" width="100%" height="100%"><h2>wallaby</h2><br>Introduced mainly for sport and the value of their skins wallaby species in New Zealand include red necked, dama, parma, blacktailed, rock and swamp wallabies.<br>Size: The larger of the two species available standing 800 mm tall with a head and body length of 65 cm and tail length of 62 cm. Males can reach 20 kg plus in weight with females reaching 14 kg.<br>Colour: Greyish brown upper body with pale grey on the chest and belly. Rufous colour on the shoulders, black tipped hind feet and tail.<br>Social behaviour: Solitary.<br>Reproduction: Males sexually mature at 21 – 22 months, some earlier, and females 23 – 24 months. Young stay in the pouch for about 274 days.<br>Gestation period: About 30 days.<br>Birthing: Peak season February to March.<br>Nomenclature: Male= buck. Female = doe. Young = joey.'
+    },
+    {
+        "title": 'Manawatu-Wanganui',
+        "lat": '-39.103990',
+        "lng": '175.046650',
+        "description": '<img src = "img/wildpig.jpg" width="100%" height="100%"><h2>Wild Pig</h2><br>Wild pigs are well established throughout New Zealand.<br>Size: Smaller than domestic pigs with more muscular bodies and males especially having massive forequarters and smaller hindquarters. Males stand nearly 1000 mm at the shoulder and can weigh as much as 45 - 205 kg with females smaller at 600 mm high and weighing up to 114 kg.<br>Colour: Most commonly black but there is considerable local variation in colour with ginger, sandy brown, white, grey and smoky blue, or combinations of these colours.<br>Tusks: Extend out from the lower jaw and curve upwards, outward and backwards. Triangular in cross section the tusks can protrude 150 mm plus.<br>Social behaviour: Mainly active in daylight although where subjected to hunting pressure may become more nocturnal or restrict their activity to early morning and late afternoon. Relatively sedentary feral pigs, where food, water and cover are suitable, will occupy home range areas in mobs of both sexes. Females with litters and older males will often live alone.<br>Feral pigs are omnivorous, eating a wide variety of food including grasses, roots, seeds and other plant material as well as carrion, earthworms and insects.<br>Reproduction: Feral pigs breed throughout the year with main time spring and summer. Litter size is 6-10 piglets with survival likely to be 3-6. Newborn piglets stay within or near the nest for first 2-3 weeks, weaning occurs at 2-4 months and young pigs stay with the sow until the next litter is due.<br>Gestation period: About 112-114 days.<br>Birthing: Throughout the year, mainly spring and summer.<br>Nomenclature: Male = boar. Females = sow. Young = piglet.<br>'
+    }
+
+
+
+    ];
+    window.onload = function () {
+        LoadMap();
+    }
+    function LoadMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+            zoom: 6,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+ 
+        //Create and open InfoWindow.
+        var infoWindow = new google.maps.InfoWindow();
+ 
+        for (var i = 0; i < markers.length; i++) {
+            var data = markers[i];
+            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: data.title
+            });
+ 
+            //Attach click event to the marker.
+            (function (marker, data) {
+                google.maps.event.addListener(marker, "click", function (e) {
+                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    infoWindow.setContent("<div style = 'width:400px;min-height:200px'>" + data.description + "</div>");
+                    infoWindow.open(map, marker);
+                });
+            })(marker, data);
+        }
+    }
+</script>
+<div id="dvMap" style="width: 100%; height: 100%">
+</div>
+
+
+<!--break-->
+
+
+ 
+
+         <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZC-cm9vyWxIPjcWbQSAsPVMk1YRU0164&signed_in=true&callback=initMap"></script>
+
+
+
+    
+        
+
+<!--menu-->
+ <div class="menu visible-md visible-lg">
+  <ul id="menu-list">
+    <li class="maps-menu"><a href="index1.html">Animals</a></li>
+    <li class="stories-menu"><a href="stories.html">Stories</a></li>
+    <li class="about-menu"><a href="about.html">About</a></li>
+    
+    
+  </ul>
+ </div>
+ <!-- /.menu -->
+
+
+
+        
+     
+
+
+
+  <!--code above here-->
+<script src="http://ajax..com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+ </body>
+</html>
+
+
+
+
+
+
+

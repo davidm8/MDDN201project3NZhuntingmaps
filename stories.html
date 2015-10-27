@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- new metas under here -->
+
+        <title>NZ hunting</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Styles.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!--break-->
+
+ 
+
+
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    var markers = [
+    {
+        "title": 'fallow',
+        "lat": '-39.103990',
+        "lng": '175.046650',
+        "description": '<img src = "img/FallowDeer.jpg" width="100%" height="100%"> <h2>story1</h2><br>Today we went out hunting as part of the deer stalkers association. Dad, Jack and I got out of the truck and started up into the hills. We didnt have to walk far before we saw the first fallow trot over a ridge ahead of us. as we crept over the ridge we saw its buddy walking 30 or so metres ahead of it now making their way across the valley face on the other side. knowing that my rifle was zeroed in for 100m and the fallow was probably around 60m away but on the downhill at around a 45 degree angle. This meant I needed to place the cross hairs lower than the animal to account of the trajectory path of the projectile not droping to its zeroed point. all in all a good days hunting and a total of 5 deer shot that week end 3 by me and 2 by jack.'
+    },
+    {
+        "title": 'Tahr',
+        "lat": '-43.767756',
+        "lng": '170.410173',
+        "description": '<img src = "img/tahr.jpg" width="100%" height="100%"> <h2>story2</h2><br>Woke up early and it was time to hit the road, we had 2 4x4s with dad my little sister and i in one and some family friends in the other. on the way up to the hut we were staying at we spotted a group of around 12 bull tahr just beginning to cross a shingle slope. dad and i began the walk up the hill while the rest looked on from below. we made sure to stay out of view on the other side of the ridge. we knew they would be just on the other side so walking with our quiet shoes on we crept up to the top of the ridge and set up ready for the shot. using a backpack as a rest for the rifle i picked my target and fired. the animal went tumbling down the slope and his buddies ran off, the end.'
+    }
+
+
+
+
+    ];
+    window.onload = function () {
+        LoadMap();
+    }
+    function LoadMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+            zoom: 6,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+ 
+        //Create and open InfoWindow.
+        var infoWindow = new google.maps.InfoWindow();
+ 
+        for (var i = 0; i < markers.length; i++) {
+            var data = markers[i];
+            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: data.title
+            });
+ 
+            //Attach click event to the marker.
+            (function (marker, data) {
+                google.maps.event.addListener(marker, "click", function (e) {
+                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    infoWindow.setContent("<div style = 'width:400px;min-height:200px'>" + data.description + "</div>");
+                    infoWindow.open(map, marker);
+                });
+            })(marker, data);
+        }
+    }
+</script>
+<div id="dvMap" style="width: 100%; height: 100%">
+</div>
+
+
+
+   
+
+        
+        
+
+<!--menu-->
+ <div class="menu visible-md visible-lg">
+  <ul id="menu-list">
+    <li class="maps-menu"><a href="index1.html">Animals</a></li>
+    <li class="stories-menu"><a href="stories.html">Stories</a></li>
+    <li class="about-menu"><a href="about.html">About</a></li>
+    
+    
+  </ul>
+ </div>
+ <!-- /.menu -->
+
+
+<!--
+
+<script>
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    
+    zoom: 13,
+    center: {lat: -44, lng: 171}
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZC-cm9vyWxIPjcWbQSAsPVMk1YRU0164&callback=initMap"
+  async defer>
+</script>
+-->
+
+        
+     
+
+
+
+  <!--code above here-->
+<script src="http://ajax..com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+ </body>
+</html>

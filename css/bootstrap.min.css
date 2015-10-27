@@ -1,0 +1,17 @@
+.mainWrapper{
+	height:800px;
+}
+
+.header{
+	height:150px;
+	text-align:center;
+	font-family:Helvetica;
+	font-weight:bold;
+	color:red;
+	font-size:20px;
+
+}
+
+.borders{
+	border:1px solid #000;
+}
